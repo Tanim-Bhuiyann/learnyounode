@@ -1,7 +1,2 @@
-let sum = 0;
+console.log(process.argv.slice(2).reduce((sum, num) => sum + Number(num), 0));
 
-for (let i = 2; i < process.argv.length; i++) {
-  sum += Number(process.argv[i]);
-}
-
-console.log(sum);

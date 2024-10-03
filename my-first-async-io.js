@@ -1,19 +1,3 @@
 const fs = require("fs");
 
-const path = process.argv[2];
-
-fs.readFile(path, "utf8",(err, data) =>{
-    if (err) {
-        console.error('got error',err);
-        return;
-        }
-
-        const lines = data.split("\n");
-        
-        const countLine = lines.length - 1;
-        console.log(countLine);
-})
-
-
-
-
+fs.readFile(process.argv[2], "utf8", (err, data) => err ? console.error("got error", err) : console.log(data.split("\n").length - 1));
